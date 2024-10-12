@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RedPay</string>
+    <string name="onboarding_first_header_text">Güvenli ve Hızlı İşlemler</string>
+    <string name="onboarding_second_header_text">Finansal Durumunuzu Takip Edin</string>
+    <string name="onboarding_third_header_text">Kişisel Önerilerle Tasarruf Edin</string>
+    <string name="onboarding_first_content_text">Bankacılık işlemlerini kolayca yapın, her adımda güvenliğinizi sağlayalım. İster para transferi ister fatura ödeme, tüm işlemler tek dokunuşla elinizde.</string>
+    <string name="onboarding_second_content_text">Gelir ve giderlerinizi anlık olarak görüntüleyin, harcamalarınızı kontrol altında tutun. Finansal hedeflerinize ulaşmanıza yardımcı oluyoruz</string>
+    <string name="onboarding_third_content_text">Harcama alışkanlıklarınıza göre kişiselleştirilmiş öneriler alın ve tasarruf fırsatlarını yakalayın. Sizin için en iyi bankacılık deneyimini sunuyoruz.</string>
+</resources>
