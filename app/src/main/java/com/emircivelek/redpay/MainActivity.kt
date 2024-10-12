@@ -13,7 +13,9 @@ import com.emircivelek.redpay.feature.ui.splash.SplashScreen
 import com.emircivelek.redpay.navigation.SetUpNavGraph
 import com.emircivelek.redpay.ui.theme.BackRed
 import com.emircivelek.redpay.ui.theme.RedPayTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
