@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "562620006318",
+    "project_id": "redpay-c9810",
+    "storage_bucket": "redpay-c9810.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562620006318:android:ab26c103d10c35f821d23f",
+        "android_client_info": {
+          "package_name": "com.emircivelek.redpay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcbOX0toY3K3g8u9JLT9drkmxIYqUu7UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

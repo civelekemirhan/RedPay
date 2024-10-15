@@ -1,4 +1,4 @@
-package com.emircivelek.redpay.feature.ui.onboarding
+package com.emircivelek.redpay.feature.ui.Screen
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -28,6 +28,9 @@ import androidx.navigation.NavController
 import com.emircivelek.redpay.R
 import com.emircivelek.redpay.common.components.AuthButton
 import com.emircivelek.redpay.common.components.AuthColumn
+import com.emircivelek.redpay.feature.ui.onboarding.OnBoardingItem
+import com.emircivelek.redpay.feature.ui.onboarding.OnBoardingPages
+import com.emircivelek.redpay.navigation.NavigationConstant
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -42,7 +45,7 @@ fun OnBoardingScreen(navController: NavController) {
         pageCount = { pages.size },
     )
 
-    AuthColumn {
+    AuthColumn(true) {
 
         Column(
             modifier = Modifier
@@ -85,24 +88,8 @@ fun OnBoardingScreen(navController: NavController) {
                     .height(100.dp), horizontalArrangement = Arrangement.Center
             ) {
                 if (pagerState.currentPage == pages.size - 1) {
-                    AuthButton(onClick = {  }, text = "Devam Et")
+                    AuthButton(onClick = { navController.navigate(NavigationConstant.REGISTER_SCREEN) }, text = "Kayıt OL")
                 }
-            }
-
-
-            Spacer(modifier = Modifier.height(10.dp))
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = stringResource(id = R.string.app_name),
-                    fontSize = 40.sp,
-                    letterSpacing = 10.sp,
-                    color = Color.White,
-                    fontWeight = FontWeight.SemiBold
-                )
             }
 
         }

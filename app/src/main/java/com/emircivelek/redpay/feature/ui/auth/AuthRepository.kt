@@ -1,4 +1,6 @@
 package com.emircivelek.redpay.feature.ui.auth
 
-class AuthRepository {
+interface AuthRepository {
+   suspend fun createUserWithPhoneNumber()
+   suspend fun loginWithPhoneNumber()
 }

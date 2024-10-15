@@ -5,5 +5,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class AuthViewModel @Inject constructor(): ViewModel() {
+class RegisterViewModel @Inject constructor(
+    val authRepository: AuthRepository
+):ViewModel() {
 }
