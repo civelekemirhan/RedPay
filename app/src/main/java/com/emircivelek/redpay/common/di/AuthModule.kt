@@ -1,5 +1,6 @@
 package com.emircivelek.redpay.common.di
 
+import android.app.Activity
 import com.emircivelek.redpay.common.FirebaseOperations
 import com.emircivelek.redpay.feature.ui.auth.AuthRepository
 import com.emircivelek.redpay.feature.ui.auth.AuthRepositoryImpl
@@ -14,6 +15,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AuthModule {
+
 
     @Provides
     @Singleton

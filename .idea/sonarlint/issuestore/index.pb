@@ -1,8 +1,6 @@
 
 h
 8app/src/main/java/com/emircivelek/redpay/MainActivity.kt,b\7\b7fb532f5fbad1e211b76e5f695fc7fb33686099
-z
-Japp/src/main/java/com/emircivelek/redpay/feature/ui/splash/SplashScreen.kt,8\0\807e1bbf5e4d12fcc236ad7bde1bfa506f603ffd
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 @
@@ -11,8 +9,6 @@ D
 app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
 x
 Happ/src/main/java/com/emircivelek/redpay/common/components/AuthColumn.kt,e\7\e7cf72f2057c4450cee165174243c753175311ad
-Ç
-Rapp/src/main/java/com/emircivelek/redpay/feature/ui/onboarding/OnBoardingScreen.kt,b\b\bbaee6d01ae16e45e9f63e2731b7f8af9c6f2d20
 Ä
 Papp/src/main/java/com/emircivelek/redpay/feature/ui/onboarding/OnBoardingItem.kt,7\f\7f7b6b3f2ce3baec46ac97006e1b9e10c1c58a6b
 Å
@@ -33,10 +29,6 @@ m
 =app/src/main/java/com/emircivelek/redpay/navigation/Screen.kt,b\e\be5874bce3430dee67fe6e300913a97d56b59a08
 j
 :app/src/main/java/com/emircivelek/redpay/ui/theme/Color.kt,c\4\c4147415bd08a78e8a596afbc62adde947158261
-w
-Gapp/src/main/java/com/emircivelek/redpay/feature/ui/auth/LoginScreen.kt,e\5\e5e600e9f086caae17bd140cf28ad73fa2d088d7
-y
-Iapp/src/main/java/com/emircivelek/redpay/feature/ui/auth/AuthViewModel.kt,6\c\6c9d4b0bdcfb3e06bdeb57418ceedd727d4280d0
 z
 Japp/src/main/java/com/emircivelek/redpay/feature/ui/auth/AuthRepository.kt,4\0\40ca935966e5ce05eb57669b9b3d4eefc816afaf
 }
@@ -61,11 +53,23 @@ u
 Eapp/src/main/java/com/emircivelek/redpay/common/FirebaseOperations.kt,1\6\1667993ac994ce91cfe1abc2f92edf37da93ce96
 p
 @app/src/main/java/com/emircivelek/redpay/common/di/AuthModule.kt,6\c\6cd5318160b26d611cda2322d58d5000a576103a
-k
-;app/src/main/java/com/emircivelek/redpay/common/di/MyApp.kt,8\3\8310cdd50315bb06be8d8ac2f595f0d458eabd96
 y
 Iapp/src/main/java/com/emircivelek/redpay/feature/ui/Screen/LoginScreen.kt,0\d\0da184280ab1dbf2d9d5c0bdc048327b6286ef92
 |
 Lapp/src/main/java/com/emircivelek/redpay/feature/ui/Screen/RegisterScreen.kt,6\b\6b6193a226b5648d1803c2aa3d43dc144c16f354
 ~
 Napp/src/main/java/com/emircivelek/redpay/feature/ui/Screen/OnBoardingScreen.kt,4\b\4b937e093e0528f9c5497a42af46533b775e9e54
+x
+Happ/src/main/java/com/emircivelek/redpay/common/components/AuthSwitch.kt,3\f\3f3cbc163115367466e67e0e1c8130b211105db4
+H
+app/google-services.json,f\d\fd8d34b142d02ec743a8efefefd2c097961666e9
+y
+Iapp/src/main/java/com/emircivelek/redpay/feature/ui/screen/LoginScreen.kt,8\b\8b73927bc36e77a4c7afe57cdf84fa75050f8144
+|
+Lapp/src/main/java/com/emircivelek/redpay/feature/ui/screen/RegisterScreen.kt,b\4\b4c1db965db137a02ab55f260545bcf7269f5573
+u
+Eapp/src/main/java/com/emircivelek/redpay/feature/ui/auth/AuthState.kt,d\e\de9fda22145304a5e11b8e4df4c2fd827f46532d
+s
+Capp/src/main/java/com/emircivelek/redpay/common/di/MyApplication.kt,4\5\4553d5544094fd6027668e15cea6cfbddc6b6df5
+z
+Japp/src/main/java/com/emircivelek/redpay/feature/ui/screen/SplashScreen.kt,8\0\804b74a989d3b4d3bba434b3e5306abd0acc3aac

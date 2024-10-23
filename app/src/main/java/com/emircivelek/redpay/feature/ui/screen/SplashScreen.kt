@@ -1,4 +1,4 @@
-package com.emircivelek.redpay.feature.ui.Screen
+package com.emircivelek.redpay.feature.ui.screen
 
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable

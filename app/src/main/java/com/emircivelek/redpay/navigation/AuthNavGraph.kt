@@ -4,10 +4,10 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.emircivelek.redpay.feature.ui.Screen.LoginScreen
-import com.emircivelek.redpay.feature.ui.Screen.OnBoardingScreen
-import com.emircivelek.redpay.feature.ui.Screen.RegisterScreen
-import com.emircivelek.redpay.feature.ui.Screen.SplashScreen
+import com.emircivelek.redpay.feature.ui.screen.LoginScreen
+import com.emircivelek.redpay.feature.ui.screen.OnBoardingScreen
+import com.emircivelek.redpay.feature.ui.screen.RegisterScreen
+import com.emircivelek.redpay.feature.ui.screen.SplashScreen
 
 fun NavGraphBuilder.AuthNavGraph(navController: NavHostController) {
 

@@ -6,15 +6,16 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun CustomTextFieldWithBottomBorder(
@@ -25,31 +26,33 @@ fun CustomTextFieldWithBottomBorder(
 ) {
     Column(
         modifier = Modifier
-            .fillMaxWidth()
+            .fillMaxWidth(width)
             .padding(16.dp)
     ) {
-        TextField(
+        OutlinedTextField(
             value = value,
             onValueChange = { onValueChange(it) },
-            label = { Text(text = labelText, color = Color.White) },
+            label = { Text(text = labelText, color = Color.White,fontSize = 18.sp,fontWeight = FontWeight.Bold) },
             singleLine = true,
-            colors = TextFieldDefaults.colors(
+            colors = OutlinedTextFieldDefaults.colors(
                 disabledContainerColor = Color.Transparent,
                 focusedContainerColor = Color.Transparent,
                 unfocusedContainerColor = Color.Transparent,
                 disabledTextColor = Color.White,
                 focusedTextColor = Color.White,
-                unfocusedTextColor = Color.White
+                unfocusedTextColor = Color.White,
+                disabledBorderColor = Color.White,
+                focusedBorderColor = Color.White,
+                unfocusedBorderColor = Color.White,
+                cursorColor = Color.White
+
             ),
-            modifier = Modifier.fillMaxWidth(width)
-        )
-        HorizontalDivider(
-            modifier = Modifier.fillMaxWidth(),
-            thickness = 1.dp,
-            color = Color.White
+            modifier = Modifier.fillMaxWidth()
         )
     }
 }
+
+
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable

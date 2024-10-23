@@ -1,4 +1,5 @@
 package com.emircivelek.redpay.feature.ui.auth
 
-class LoginState {
-}
+data class LoginState(
+    val phoneNumber: String = "",
+)
