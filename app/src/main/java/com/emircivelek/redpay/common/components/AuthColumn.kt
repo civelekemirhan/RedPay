@@ -22,11 +22,11 @@ import com.emircivelek.redpay.ui.theme.BackRed
 @Composable
 fun AuthColumn(isBottomHeaderVisible: Boolean = false, content: @Composable () -> Unit) {
 
-    Scaffold {
+    Scaffold { contentPadding->
         if (isBottomHeaderVisible) {
             Column(
                 modifier = Modifier
-                    .padding(it)
+                    .padding(contentPadding)
                     .fillMaxSize()
                     .background(BackRed),
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -57,9 +57,10 @@ fun AuthColumn(isBottomHeaderVisible: Boolean = false, content: @Composable () -
 
             }
         } else {
+
             Column(
                 modifier = Modifier
-                    .padding(it)
+                    .padding(contentPadding)
                     .fillMaxSize()
                     .background(BackRed),
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -69,6 +70,7 @@ fun AuthColumn(isBottomHeaderVisible: Boolean = false, content: @Composable () -
             }
 
         }
+        
 
     }
 

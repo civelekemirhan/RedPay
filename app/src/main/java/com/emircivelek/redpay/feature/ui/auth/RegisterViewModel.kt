@@ -1,21 +1,22 @@
 package com.emircivelek.redpay.feature.ui.auth
 
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import java.util.UUID
 import javax.inject.Inject
 
 @HiltViewModel
 class RegisterViewModel @Inject constructor(
-    val authRepository: AuthRepository
+    private val authRepository: AuthRepository
 ) : ViewModel() {
 
 
@@ -29,10 +30,14 @@ class RegisterViewModel @Inject constructor(
     }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), RegisterState())
 
+    private val _authState= MutableStateFlow<AuthState>(AuthState.Idle)
+    val authState=_authState.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), AuthState.Idle)
+
     private val _verificationId = MutableStateFlow<String?>(null)
 
-    private val _authState = MutableStateFlow<AuthState>(AuthState.Idle)
-    val authState = _authState.asStateFlow()
+
+
+
 
     fun onEvent(event: RegisterEvent) {
         when (event) {
@@ -58,34 +63,44 @@ class RegisterViewModel @Inject constructor(
                         surname = event.surname
                     )
                 }
-
             }
 
             is RegisterEvent.CodeSent -> {
                 viewModelScope.launch {
 
-                    _registerState.update {
-                        it.copy(
-                            isCodeSent = true
-                        )
+                    if(_registerState.value.name.isNotEmpty() && _registerState.value.surname.isNotEmpty() && _registerState.value.phoneNumber.isNotEmpty()){
+                        if(_registerState.value.phoneNumber.length==10){
+
+                           authRepository.createUserWithPhoneNumber(
+                                _registerState.value.phoneNumber,
+                                event.activity,
+                                _authState,
+                                _verificationId,
+                            )
+                            Log.d("_authState.value",_authState.value.toString())
+                        }else{
+                            _authState.value=AuthState.Error("Telefon Numarası 10 haneli olmalıdır",false)
+                        }
+
+                        }else{
+
+                        _authState.value=AuthState.Error("Lütfen tüm alanları doldurunuz",false)
                     }
 
-                    authRepository.createUserWithPhoneNumber(
-                        _registerState.value.phoneNumber,
-                        event.activity,
-                        _authState,
-                        _verificationId
-                    )
 
                 }
+
             }
 
             is RegisterEvent.CodeVerified -> {
                 viewModelScope.launch {
-                    authRepository.verifyCode(event.code,_authState,_verificationId)
+                    val uuid = UUID.randomUUID()
+                    val accountID = uuid.mostSignificantBits.toString().takeLast(10).toIntOrNull() ?: 0
+                    val user=User(registerState.value.phoneNumber,registerState.value.name,registerState.value.surname,accountID.toLong())
+                    authRepository.verifyCode(event.code,_authState,_verificationId,user)
+                    Log.d("verificationId",_verificationId.value.toString())
+                    _authState.value=AuthState.Loading
                 }
-
-
             }
 
             is RegisterEvent.SetVerificationCode -> {

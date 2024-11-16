@@ -73,3 +73,7 @@ s
 Capp/src/main/java/com/emircivelek/redpay/common/di/MyApplication.kt,4\5\4553d5544094fd6027668e15cea6cfbddc6b6df5
 z
 Japp/src/main/java/com/emircivelek/redpay/feature/ui/screen/SplashScreen.kt,8\0\804b74a989d3b4d3bba434b3e5306abd0acc3aac
+~
+Napp/src/main/java/com/emircivelek/redpay/feature/ui/screen/OnBoardingScreen.kt,2\6\26f5f2fd54d6ae186d6efc24a479414e7d2d7d2e
+x
+Happ/src/main/java/com/emircivelek/redpay/feature/ui/screen/HomeScreen.kt,1\1\11f54ffd462ab10db9490bbca23a9506dd22bf3d

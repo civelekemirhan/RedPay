@@ -16,6 +16,7 @@ interface AuthRepository {
     suspend fun verifyCode(
         code: String,
         state: MutableStateFlow<AuthState>,
-        verificationId: MutableStateFlow<String?>
+        verificationId: MutableStateFlow<String?>,
+        user:User
     )
 }

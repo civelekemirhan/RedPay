@@ -12,9 +12,9 @@ class AuthRepositoryImpl @Inject constructor(val firebaseAuth: FirebaseOperation
         phoneNumber: String,
         activity: Activity,
         state: MutableStateFlow<AuthState>,
-        verificationId: MutableStateFlow<String?>
+        verificationId: MutableStateFlow<String?>,
     ) {
-        firebaseAuth.startPhoneNumberVerification(phoneNumber, activity, state,verificationId)
+       firebaseAuth.startPhoneNumberVerification(phoneNumber, activity, state,verificationId)
     }
 
     override suspend fun loginWithPhoneNumber() {
@@ -24,9 +24,10 @@ class AuthRepositoryImpl @Inject constructor(val firebaseAuth: FirebaseOperation
     override suspend fun verifyCode(
         code: String,
         state: MutableStateFlow<AuthState>,
-        verificationId: MutableStateFlow<String?>
+        verificationId: MutableStateFlow<String?>,
+        user:User
     ) {
-        firebaseAuth.verifyCode(code,state,verificationId)
+        firebaseAuth.verifyCode(code,state,verificationId,user)
     }
 
 }

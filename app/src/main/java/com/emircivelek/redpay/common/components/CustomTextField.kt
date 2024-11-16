@@ -22,6 +22,7 @@ fun CustomTextFieldWithBottomBorder(
     value: String,
     onValueChange: (String) -> Unit,
     labelText: String,
+    color:Color=Color.White,
     width:Float
 ) {
     Column(
@@ -38,13 +39,13 @@ fun CustomTextFieldWithBottomBorder(
                 disabledContainerColor = Color.Transparent,
                 focusedContainerColor = Color.Transparent,
                 unfocusedContainerColor = Color.Transparent,
-                disabledTextColor = Color.White,
-                focusedTextColor = Color.White,
-                unfocusedTextColor = Color.White,
-                disabledBorderColor = Color.White,
-                focusedBorderColor = Color.White,
-                unfocusedBorderColor = Color.White,
-                cursorColor = Color.White
+                disabledTextColor = color,
+                focusedTextColor = color,
+                unfocusedTextColor = color,
+                disabledBorderColor = color,
+                focusedBorderColor = color,
+                unfocusedBorderColor = color,
+                cursorColor = color
 
             ),
             modifier = Modifier.fillMaxWidth()
@@ -58,7 +59,7 @@ fun CustomTextFieldWithBottomBorder(
 @Composable
 fun PreviewCustomTextField() {
     Column(modifier=Modifier.fillMaxSize().background(Color.Red)){
-        CustomTextFieldWithBottomBorder("", {},"Telefon Numarası giriniz",0.9f)
+        CustomTextFieldWithBottomBorder("", {},"Telefon Numarası giriniz",Color.White,0.9f)
     }
 
 }
