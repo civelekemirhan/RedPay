@@ -122,7 +122,7 @@ dependencies {
     implementation("io.coil-kt:coil-compose:2.2.2")
 
     // Import the BoM for the Firebase platform
-    implementation(platform("com.google.firebase:firebase-bom:33.2.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
 
 
     // Add the dependency for the Firebase Authentication library
@@ -132,6 +132,7 @@ dependencies {
     // Add the dependencies for the App Check libraries
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation("com.google.firebase:firebase-appcheck-playintegrity")
+
 
 
     implementation(libs.androidx.navigation.compose)

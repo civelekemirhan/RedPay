@@ -2,7 +2,7 @@
   "project_info": {
     "project_number": "562620006318",
     "project_id": "redpay-c9810",
-    "storage_bucket": "redpay-c9810.appspot.com"
+    "storage_bucket": "redpay-c9810.firebasestorage.app"
   },
   "client": [
     {
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDcbOX0toY3K3g8u9JLT9drkmxIYqUu7UU"
+          "current_key": "AIzaSyAdOsGQlcHnzogvJWtp5J5v0pC_Ro65RR8"
         }
       ],
       "services": {

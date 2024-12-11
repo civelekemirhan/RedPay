@@ -70,7 +70,7 @@ class RegisterViewModel @Inject constructor(
 
                     if(_registerState.value.name.isNotEmpty() && _registerState.value.surname.isNotEmpty() && _registerState.value.phoneNumber.isNotEmpty()){
                         if(_registerState.value.phoneNumber.length==10){
-
+                            _authState.value=AuthState.Loading
                            authRepository.createUserWithPhoneNumber(
                                 _registerState.value.phoneNumber,
                                 event.activity,

@@ -274,12 +274,14 @@ fun RegisterScreen(navController: NavController) {
                     }
 
                     else -> {
-                        val auth = Firebase.auth
-                        Log.d("auth", auth.currentUser?.uid.toString())
-                        Toast.makeText(context,"Kayıt Başarılı",Toast.LENGTH_SHORT).show()
-                        navController.navigate(NavigationConstant.CONTENT_GRAPH_ROUTE){
-                            popUpTo(NavigationConstant.AUTH_GRAPH_ROUTE){
-                                inclusive=true
+                        LaunchedEffect(Unit){
+                            val auth = Firebase.auth
+                            Log.d("auth", auth.currentUser?.uid.toString())
+                            Toast.makeText(context,"Kayıt Başarılı",Toast.LENGTH_SHORT).show()
+                            navController.navigate(NavigationConstant.CONTENT_GRAPH_ROUTE){
+                                popUpTo(NavigationConstant.AUTH_GRAPH_ROUTE){
+                                    inclusive=true
+                                }
                             }
                         }
                     }
